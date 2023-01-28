@@ -2,10 +2,14 @@
   cursor: pointer;
 }
 .sp-tag{
-  color: blue;
+  color: rgb(131, 131, 233);
+}
+.p-yag{
+  color: rgb(124, 124, 230);
 }
 .p-yag:hover{
   cursor: pointer;
+
 }
 img{
   width: 300px;
@@ -23,4 +27,31 @@ img{
 }
 .sp-tt:hover{
   cursor: pointer;
+}
+.send-btn:hover{
+  cursor: pointer;
+}
+.inp{
+  margin-left: 400px;
+  margin-top: 200px;
+  width: 300px;
+}
+input{
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+}
+button{
+  margin-top: 10px;
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+}
+body{
+  background-color: rgb(222, 75, 75);
+}
+button:hover{
+  cursor: pointer;
+  background-color: blue;
+  color: white;
 }

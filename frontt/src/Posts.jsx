@@ -15,7 +15,7 @@ export default function Posts() {
     const func = async () => {
       console.log(localStorage.getItem('token'))
       const headers = { 'Authorization': localStorage.getItem('token') }
-      const res = await axios.post('http://localhost:3000/posts/geting', null, { headers })
+      const res = await axios.post('https://newproject-abja.onrender.com/posts/geting', null, { headers })
       setState(res.data)
     }
     func()
@@ -33,8 +33,8 @@ export default function Posts() {
   return (
     <div >
       <div style={{marginTop:'50px'}}>
-      <span style={{marginLeft:'150px',fontSize:'30px'}} className='p-yag' onClick={Creating}>Create</span>
-      <span style={{marginLeft:'1000px',fontSize:'30px'}} onClick={logout}>Log-Out</span>
+      <span style={{marginLeft:'150px',fontSize:'30px'}} className='p-yag' onClick={Creating}>+ Create</span>
+      <span style={{marginLeft:'1000px',fontSize:'30px'}} className='p-yag' onClick={logout}>Log-Out</span>
       </div>
       {state.length !== 0 ?
         <div className='content' style={{marginTop:'40px'}}>
@@ -44,7 +44,7 @@ export default function Posts() {
                 <h1 onClick={() => datas(i)} className='title'>Title :</h1>
                 <p>{e.Title}</p>
                 <h1>Discription :</h1>
-                {st && i==iofRead ?<div>{e.Dis}<span className='sp-tt' style={{marginLeft:'30px',color:'blue'}} onClick={()=>{setSt(false);setIodread(i)}}>Readless</span></div>:<div>{e.Dis.substr(0,100)}<span className='sp-tt' onClick={()=>{setSt(true);setIodread(i)}} style={{marginLeft:'30px',color:'blue'}}>Readmore</span></div>}
+                {st && i==iofRead ?<div>{e.Dis}<span className='sp-tt' style={{marginLeft:'30px',color:'rgb(124, 124, 230)'}} onClick={()=>{setSt(false);setIodread(i)}}>Readless</span></div>:<div>{e.Dis.substr(0,100)}<span className='sp-tt' onClick={()=>{setSt(true);setIodread(i)}} style={{marginLeft:'30px',color:'rgb(124, 124, 230)'}}>Readmore</span></div>}
                 <h1>Image :</h1>
                 {iset == i ? <img src={e.img} alt="" /> : ''}
                 <hr />
