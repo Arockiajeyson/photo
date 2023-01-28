@@ -20,7 +20,7 @@ export default function Registerp() {
         registerFun(state)
     }
     return (
-        <div>
+        <div className='inp'>
             <div>
                 <h2>Email :</h2>
                 <input type="email" onChange={(e) => setState({ ...state, Email: e.target.value })} />

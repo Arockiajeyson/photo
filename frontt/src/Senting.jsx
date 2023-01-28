@@ -15,14 +15,14 @@ export default function Senting() {
     const handler =async()=>{
         console.log(state)
         const headers = { 'Authorization': localStorage.getItem('token') }
-        const res= await axios.post('http://localhost:3000/posts/posting',state,{headers})
+        const res= await axios.post('https://newproject-abja.onrender.com/posts/posting',state,{headers})
         if(res.data ==='uploaded'){
             toast.success(res.data)
             nav('/post')
         }
     }
   return (
-    <div>
+    <div className='inp'>
         <div>
             <h1>Title :</h1>
             <input type="text" onChange={(e)=>setState({...state,Title:e.target.value})}/>
@@ -36,7 +36,7 @@ export default function Senting() {
             <FileBase64 onDone={(file)=>setState({...state,img:file.base64})} />
         </div>
         <div>
-            <button onClick={handler}>Send</button>
+            <button className='send-btn' onClick={handler}>Send</button>
         </div>
     </div>
   )

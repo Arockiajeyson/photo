@@ -20,7 +20,7 @@ export default function LoginP() {
         LoginFun(state,ref1,ref2)
     }
   return (
-    <div>
+    <div className='inp'>
             <div>
                 <h2>Email :</h2>
                 <input type="text" ref={ref1} onChange={(e) => setState({ ...state, Email: e.target.value })} />

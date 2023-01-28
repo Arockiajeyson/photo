@@ -10,7 +10,7 @@ export function AuthorContext({ children }) {
     const {toast} =useContext(ToastCon)
     const registerFun =async(e)=>{
         const {Email,Password} =e
-        const res =await axios.post('http://localhost:3000/register',{Email,Password})
+        const res =await axios.post('https://newproject-abja.onrender.com/register',{Email,Password})
         if(res.data ==='Successful'){
             toast.success(res.data)
             nav('/')
@@ -21,7 +21,7 @@ export function AuthorContext({ children }) {
     }
     const LoginFun=async(e,ref1,ref2)=>{
         // console.log(e)
-        const res =await axios.post('http://localhost:3000/login',e)
+        const res =await axios.post('https://newproject-abja.onrender.com/login',e)
         console.log(res.data)
         if(res.data ==='Register first'){
             return toast.error(res.data)
