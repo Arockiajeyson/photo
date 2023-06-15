@@ -1,11 +1,17 @@
+body{
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(233, 184, 184);
+  background-image: linear-gradient(rgb(125, 125, 225),rgb(224, 162, 137));
+}
 .sp-tag:hover{
   cursor: pointer;
 }
 .sp-tag{
-  color: rgb(131, 131, 233);
+  color: rgb(20, 20, 235);
 }
-.p-yag{
-  color: rgb(124, 124, 230);
+.Create{
+  color: rgb(24, 24, 235);
 }
 .p-yag:hover{
   cursor: pointer;
@@ -32,26 +38,35 @@ img{
   cursor: pointer;
 }
 .inp{
-  margin-left: 400px;
-  margin-top: 200px;
-  width: 300px;
+  width: 30%;
+  background-image: linear-gradient(rgb(82, 82, 238),rgb(77, 195, 214));
+  padding: 20px;
+  border-radius: .4em;
+  box-shadow: 4px 4px 4px rgb(74, 70, 70);
 }
 input{
   width: 100%;
   height: 40px;
   border-radius: 10px;
+  animation: running 1ms ease-in-out 0 ;
 }
+
 button{
   margin-top: 10px;
   width: 100%;
   height: 40px;
   border-radius: 10px;
 }
-body{
-  background-color: rgb(222, 75, 75);
-}
+
 button:hover{
   cursor: pointer;
   background-color: blue;
   color: white;
+}
+.main-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 89vh;
 }
